@@ -1,0 +1,43 @@
+.svg_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // min-height: 100vh;
+    // background: #05261a;
+  }
+  
+  .svg_load {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    animation: rotate 2s linear infinite;
+  }
+  
+  .svg_load circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 1;
+    stroke: #006aff;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 57;
+    stroke-dashoffset: 57;
+    animation: load 2s linear infinite;
+  }
+  
+  @keyframes load {
+    0%{
+      stroke-dashoffset: 57;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    50.1% {
+      stroke-dashoffset: 115;
+    }
+    100% {
+      stroke-dashoffset: 57;
+    }
+  }
+  
