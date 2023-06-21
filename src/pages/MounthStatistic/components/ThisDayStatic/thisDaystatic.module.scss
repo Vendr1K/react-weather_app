@@ -1,0 +1,18 @@
+.weather__list{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+
+    @media all and (max-width: 1024px) {
+        gap: 8px;
+    }
+
+    @media all and (max-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    @media all and (max-width: 440px) {
+        gap: 8px;
+    }
+}

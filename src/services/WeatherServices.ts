@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IQuery, IWeather } from '../models/interface';
+import { IDayStatistic, IQuery, IWeather } from '../models/interface';
 
 
 
@@ -43,7 +43,7 @@ export const weatherAPIdays = createApi({
     tagTypes: ['weatherPost'],
     baseQuery: fetchBaseQuery({baseUrl: (`https://api.openweathermap.org/data/2.5`)}),
     endpoints: (builder) => ({
-        fetchDaysWeather: builder.query<IWeather, IQuery>({
+        fetchDaysWeather: builder.query<IDayStatistic, IQuery>({
             // ?q=${city}&appid=410eca8247cda096958ede6c0d087db6&lang=ru&units=metric
             query: ({city, key, lang, units}) => ({
                 url: '/forecast',

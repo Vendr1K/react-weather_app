@@ -28,8 +28,6 @@ export interface IWeatherMain {
     temp_min: number,
 }
 
-
-
 export interface IWeather { 
     id: number,
     name: string,
@@ -80,5 +78,44 @@ export interface IThisDayInfoWind {
     windDeg: number | null,
     windSpeed: number | null,
     windGust: number | null,
+}
+
+
+export interface IDayStatisticCity {
+
+    city: {
+        cord: {
+            lat: number,
+            lon: number,
+        },
+    }    
+    country: string, 
+    id: number, 
+    name: string, 
+    population: number,
+    sunrise: number,
+    sunset: number,
+    timezon: number,
+    
+}
+
+export interface IDayStatisticList {
+    dt_txt: string,
+    dt: number,
+    main: IWeatherMain,
+    rain?: undefined | unknown,
+    weather: [
+        IWeatherDescr
+    ],
+    wind: IWeatherWind
+}
+
+export interface IDayStatistic {
+    city: IDayStatisticCity,
+    cnt: number,
+    cod: string,
+    message: string,
+    list: IDayStatisticList[],
+    rain?: undefined | unknown,
 }
   

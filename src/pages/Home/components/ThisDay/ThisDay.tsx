@@ -6,7 +6,7 @@ import styles from './thisDay.module.scss';
 export function ThisDay({name, temp, icon, dt}: IThisDay) {
 
   // console.log(data)
-
+  // {dt ? `${dateTime(dt).weekDay}`: '_'}
   return (
     <div className={`${styles.this_day}`}>
       <div className={styles.this_day__top}>

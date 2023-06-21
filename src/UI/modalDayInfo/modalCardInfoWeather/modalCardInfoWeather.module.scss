@@ -1,0 +1,136 @@
+@import '../../../styles/variables.scss';
+
+.modal_day {
+  padding: 20px;
+  background: var(#{--components-background-default});
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  margin-right: 40px;
+
+  @media all and (max-width: 1024px) {
+   margin-right: 20px;
+  }
+
+  
+  @media all and (max-width: 600px) {
+    margin-right: 0;
+    margin-bottom: 15px;
+   }
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media all and (max-width: 600px) {
+      justify-content: space-around;
+      margin-bottom: 5px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        &__day_name{
+            font-size: 40px;
+            color: var(#{--text-color-default});
+
+            @media all and (max-width: 1024px) {
+              font-size: 34px;
+            }
+
+            @media all and (max-width: 768px) {
+              font-size: 30px;
+             }
+          
+        
+            @media all and (max-width: 600px) {
+              font-size: 25px;
+            }
+
+            @media all and (max-width: 400px) {
+              font-size: 34px;
+            }
+        }
+
+        &__temp {
+            font-size: 96px;
+            font-weight: 500;
+            color: $primary-color;
+
+            @media all and (max-width: 1024px) {
+              font-size: 68px;
+            }
+          
+
+            @media all and (max-width: 768px) {
+              font-size: 36px;
+             }
+
+            @media all and (max-width: 600px) {
+              font-size: 50px;
+            }
+
+            @media all and (max-width: 400px) {
+              font-size: 56px;
+            }
+        }
+
+        &__icon {
+          width: 150px;
+          height: 150px;
+
+          @media all and (max-width: 1024px) {
+            width: 120px;
+            height: 120px;
+          }
+
+          @media all and (max-width: 768px) {
+            width: 100px;
+            height: 100px;
+          }
+
+          @media all and (max-width: 600px) {
+            width: 120px;
+            height: 120px;
+          }
+
+          
+          @media all and (max-width: 400px) {
+            width: 120px;
+            height: 120px;
+          }
+
+        }
+       
+    }
+  }
+
+  &__bottom {
+    color: $base-color;
+    font-size: 25px;
+
+    @media all and (max-width: 1024px) {
+      font-size: 22px;
+    }
+
+    @media all and (max-width: 768px) {
+      font-size: 18px;
+     }
+
+    @media all and (max-width: 600px) {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media all and (max-width: 400px) {
+      display: block;
+    }
+  }
+}
+
+

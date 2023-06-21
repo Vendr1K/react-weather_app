@@ -9,11 +9,11 @@ export function windDirection(windDeg: number) {
     }
 
     if ((windDeg >= 70 && windDeg <= 110) ) {
-        return 'Восточгый'
+        return 'Восточный'
     }
 
     if (windDeg > 110 && windDeg < 160) {
-        return 'юго-восточгый'
+        return 'юго-восточный'
     }
 
     if ((windDeg >= 160 && windDeg  <= 200) ) {
@@ -32,6 +32,6 @@ export function windDirection(windDeg: number) {
         return 'cеверо-западный'
     }
 
-    return 'не определено '
+    return 'не определено'
      
   }

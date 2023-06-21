@@ -15,7 +15,9 @@ export const DayItem = ({temp, pressure, precipitation, wind}: Props) => {
 
   const pressure__rt = pressure.pressure ? pressureNow(pressure.pressure).pressure__rt: '-';
   const pressure__feels_like = pressure.pressure ? pressureNow(pressure.pressure).pressure__feels_like: '-';
-  const windDer = wind.windDeg ? windDirection(wind.windDeg): '-'
+  const windDer = wind.windDeg ? windDirection(wind.windDeg): '-';
+  const tempNow = temp.temp ? temp.temp.toFixed() : '-';
+  const tempFeels = temp.feels_like ? temp.feels_like.toFixed() : '-';
 
   return (
     <ul className={styles.day_list}>
@@ -26,7 +28,7 @@ export const DayItem = ({temp, pressure, precipitation, wind}: Props) => {
         </div>
         <div className={styles.day_list__item__descr}>
           <span className={styles.day_list__item__descr__name}>{temp.name}: </span>
-          <span className={styles.day_list__item__descr__value}>{`${temp.temp?.toFixed()}° - ощущается как ${temp.feels_like?.toFixed()}°` }</span>
+          <span className={styles.day_list__item__descr__value}>{`${tempNow}° - ощущается как ${tempFeels}°` }</span>
         </div>
       </li>
       <li className={styles.day_list__item}>

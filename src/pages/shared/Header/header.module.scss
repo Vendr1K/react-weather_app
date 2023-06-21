@@ -6,10 +6,9 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-
+    position: relative;
     @media all and (max-width: 550px) {
         flex-direction: column;
-        // align-items: center;
       }
 
    
@@ -29,9 +28,15 @@
 
         &__error {
             position: absolute;
-            left: 8px;
-            bottom: -20px;
+            right: 0px;
+            bottom: -10px;
             color: red;
+
+            @media all and (max-width: 550px) {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+              }
         }
 
         &__input {
@@ -52,7 +57,6 @@
             background-color: rgba(71, 147, 255, 0.2);
             border-radius: 8px ;
             cursor: pointer;
-            // border: 2px solid #4793ff;
             border: 2px solid rgba(71, 147, 255, 0.8);
             font-weight: 500;
 
@@ -69,10 +73,30 @@
         width: fit-content;
         padding: 10px 0;
 
+        &_right{
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+
+            &__bottom{
+                display: flex;
+                align-items: center;
+            }
+
+            &__top {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+        
+
         &__title {
             text-transform: uppercase;
             font-size: 25px;
             font-weight: bold;
+            color: var(--title-background-default);
 
             @media all and (max-width: 780px) {
                 font-size: 20px;
@@ -83,7 +107,16 @@
         &__logo,
         &__theme {
             margin-right: 10px;
+            cursor: pointer;
         }
-
     }
+}
+
+.btn__promt{
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    border-bottom: 1px solid var(--subtitle-background-default);
+    cursor: pointer;
+    color: var(--subtitle-background-default);
 }

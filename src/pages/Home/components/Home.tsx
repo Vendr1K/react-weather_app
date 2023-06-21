@@ -15,8 +15,8 @@ const rain = data?.rain ? Object.values(data?.rain)[0] : null
 
 
   return (
-    <div className={`container ${styles.home}`}>
-      <div className={styles.home__wrapper}>
+    <div className={`${styles.home}`}>
+      <div className={`container ${styles.home__wrapper}`}>
           <ThisDay name={data?.name ?? null} temp={data?.main.temp ?? null} icon={data?.weather[0].icon ?? null } dt={data?.dt ?? null}/>
           <DayInfo 
             temp={data?.main.temp ?? null} 
