@@ -14,6 +14,7 @@ export function WeatherModal(props: IPost) {
     const refClose = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
+        console.log('das')
         function handleClikc(event: MouseEvent) {
             if(event.target instanceof Node && refClose.current?.contains(event.target)) {
                 props.onClose?.()
